@@ -31,7 +31,7 @@ function App() {
 	}
 
 	function removeTask(id) {
-		setTodos([...todos.filter((todo) => todo.id !== id).filter((todo) => todo.length > 1 ? todo.index : todo.index--)])
+		setTodos([...todos.filter((todo) => todo.id !== id).filter((todo) => todo.length > 1 ? todo.index : todo.index === 1 ? todo.index : todo.index--)])
 	}
 
 	function handleToggle(id) {
